@@ -1,0 +1,21 @@
+{
+  "name": "app-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.16.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphql-tools": "^6.0.18",
+    "mysql2": "^2.1.0",
+    "require-all": "^3.0.0",
+    "sequelize": "^6.3.4",
+    "sequelize-cli": "^6.2.0"
+  }
+}
