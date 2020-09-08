@@ -1,9 +1,32 @@
 type User{
-    id: String
-    firstName: String
+    id: String @auth(requires: ADMIN)
+    firstName: String @auth(requires: ADMIN)
     lastName: String
+    sex: Int
+    address: String
+    phone: String
+    email: String
+    status: Int
+    createdAt: String
+    updatedAt: String
 }
 
 type Query{
     getUser: [User]
+}
+
+input UserInfo{
+    firstName: String
+    lastName: String
+    sex: Int
+    address: String
+    phone: String
+    email: String!
+    status: Int
+    password: String
+    confirm: String
+}
+
+type Mutation{
+    createUser(user: UserInfo): User
 }

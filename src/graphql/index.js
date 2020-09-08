@@ -6,7 +6,11 @@ const typesArray = loadFilesSync(path.join(__dirname, "/**/*.graphql"));
 const resolversArray = loadFilesSync(
   path.join(__dirname, "./**/*.resolvers.*")
 );
+const AuthDirective = require("./Directive/auth");
 module.exports = makeExecutableSchema({
   typeDefs: mergeTypeDefs(typesArray, { all: true }),
   resolvers: mergeResolvers(resolversArray),
+  schemaDirectives: {
+    auth: AuthDirective
+  }
 });
